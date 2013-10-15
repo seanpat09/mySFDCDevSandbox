@@ -21,5 +21,6 @@ public with sharing class ChangePasswordController {
         
         System.assertEquals(controller.changePassword(),null);
         //test comment
+        //hotfix!
     }    
 }
