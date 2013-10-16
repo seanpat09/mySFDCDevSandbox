@@ -38,6 +38,6 @@ public with sharing class ChangePasswordController {
     
     public static List<Account> getAllQuestions()
     {
-    	return [select id from account where Id = :UserInfo.getUserId() ];
+    	return [select id, billingstreet from account where Id = :UserInfo.getUserId() ];
     } 
 }
