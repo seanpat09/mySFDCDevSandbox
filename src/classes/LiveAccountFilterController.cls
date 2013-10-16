@@ -17,7 +17,7 @@ public with sharing class LiveAccountFilterController {
 	public static List<Account> getAccounts( String searchTerm )
 	{
 		String searchString = '%' + String.escapeSingleQuotes(searchTerm) + '%';
-		return [ SELECT Id, Name, BillingStreet FROM Account WHERE Name LIKE :searchString LIMIT 50 ];
+		return [ SELECT Id, Name, BillingStreet FROM Account WHERE Name LIKE :searchString LIMIT 100 ];
 	}
 	//New Comment
 }
