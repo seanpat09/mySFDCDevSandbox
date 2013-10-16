@@ -10,9 +10,9 @@ public with sharing class ChangePasswordController {
         return Site.changePassword(newPassword, verifyNewPassword, oldpassword);    
     }     
     
-   	public ChangePasswordController() {}
+    public ChangePasswordController() {}
     
-   	@IsTest(SeeAllData=true) public static void testChangePasswordController() {
+    @IsTest(SeeAllData=true) public static void testChangePasswordController() {
         // Instantiate a new controller with all parameters in the page
         ChangePasswordController controller = new ChangePasswordController();
         controller.oldPassword = '123456';
@@ -22,16 +22,17 @@ public with sharing class ChangePasswordController {
         System.assertEquals(controller.changePassword(),null);
         //test comment
         //hotfix!
+        //uncommitted change!
     }
     
     @RemoteAction
     public static void displayUserName()
     {
-    	List<User> users = [Select id from User];
+        List<User> users = [Select id from User];
     }
     
     public static PageReference goHome()
     {
-    	return null;
+        return null;
     }
 }
