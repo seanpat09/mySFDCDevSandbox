@@ -22,5 +22,11 @@ public with sharing class ChangePasswordController {
         System.assertEquals(controller.changePassword(),null);
         //test comment
         //hotfix!
-    }    
+    }
+    
+    @RemoteAction
+    public static void displayUserName()
+    {
+    	List<User> users = [Select id from User];
+    }
 }
