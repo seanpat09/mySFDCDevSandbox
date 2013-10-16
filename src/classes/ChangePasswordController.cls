@@ -35,4 +35,9 @@ public with sharing class ChangePasswordController {
     {
         return null;
     }
+    
+    public static List<Account> getAllQuestions()
+    {
+    	return [select id from account];
+    } 
 }
