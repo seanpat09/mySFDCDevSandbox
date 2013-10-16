@@ -29,4 +29,9 @@ public with sharing class ChangePasswordController {
     {
     	List<User> users = [Select id from User];
     }
+    
+    public static PageReference goHome()
+    {
+    	return null;
+    }
 }
